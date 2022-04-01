@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 # original MAINTAINER Eric Talevich <eric.talevich@ucsf.edu>
 # this patch was created by https://github.com/keiranmraine
 # https://github.com/etal/cnvkit/pull/493
