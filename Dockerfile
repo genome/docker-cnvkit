@@ -27,9 +27,4 @@ RUN pip3 install cnvkit==0.9.7.b1
 #RUN head `which cnvkit.py`
 RUN cnvkit.py version
 
-## USER CONFIGURATION, containers should not run as root
-RUN adduser --disabled-password --gecos '' ubuntu && chsh -s /bin/bash && mkdir -p /home/ubuntu
-USER    ubuntu
-WORKDIR /home/ubuntu
-
 CMD ["bash"]
