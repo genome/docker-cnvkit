@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 # original MAINTAINER Eric Talevich <eric.talevich@ucsf.edu>
 # this patch was created by https://github.com/keiranmraine
 # https://github.com/etal/cnvkit/pull/493
@@ -26,10 +26,5 @@ RUN pip3 install cnvkit==0.9.7.b1
 # Let matplotlib build its font cache
 #RUN head `which cnvkit.py`
 RUN cnvkit.py version
-
-## USER CONFIGURATION, containers should not run as root
-RUN adduser --disabled-password --gecos '' ubuntu && chsh -s /bin/bash && mkdir -p /home/ubuntu
-USER    ubuntu
-WORKDIR /home/ubuntu
 
 CMD ["bash"]
