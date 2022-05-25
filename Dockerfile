@@ -22,7 +22,7 @@ RUN apt-get install -y \
     zlib1g-dev
 RUN pip3 install -U Cython
 RUN pip3 install -U future futures pandas pomegranate pyfaidx pysam
-RUN pip3 install cnvkit==0.9.7.b1
+RUN pip3 install cnvkit==0.9.9
 # Let matplotlib build its font cache
 #RUN head `which cnvkit.py`
 RUN cnvkit.py version
